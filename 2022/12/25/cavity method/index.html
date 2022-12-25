@@ -39,17 +39,23 @@ $$
 
 实际上就是将一个联合概率分布 $p(I, D, G, S, L)$ 表达为多个局部的概率分布 $P(I)$、 $P(D)$、 $P(G \mid I, D)$、 $P(L \mid G)$、 $P(S \mid I)$ 的联乘。将各个概率分布抽象为一个函数，$f_I(I)$、 $f_D(D)$、 $f_G(G, I, D)$、 $f_S(L, G)$、 $f_L(S, I)$，在因子图中可以表示为    
 
-![贝叶斯网络的因子图表示](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075131_%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9B%A0%E5%AD%90%E5%9B%BE.png)
 
-对于自旋玻璃模型的哈密顿量，可以用因子图表示为
+![贝叶斯网络的因子图表示](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075131_%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9B%A0%E5%AD%90%E5%9B%BE.png)  
 
-![自旋玻璃模型的哈密顿的因子图表示](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075234_Sourlas%E7%9A%84%E5%9B%A0%E5%AD%90%E5%9B%BE.png)
+
+对于自旋玻璃模型的哈密顿量，可以用因子图表示为  
+
+
+![自旋玻璃模型的哈密顿的因子图表示](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075234_Sourlas%E7%9A%84%E5%9B%A0%E5%AD%90%E5%9B%BE.png)  
+
 
 其中变量节点 $i,j,k,\cdots$表示哈密顿量中的dynamical binary spin variable，也即Sourlas码中的信号源 $\boldsymbol{\xi}\in \{\pm 1\}^N$，功能节点则表示一个连乘操作 $\prod_{i\in\partial a}$，每个功能节点与几个变量节点相连，正是Sourlas码的编码规则。
 
-由于这是一个稀疏连接的网络，可以展开成树状图：
+由于这是一个稀疏连接的网络，可以展开成树状图：  
 
-![因子图展开为树状图](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075344_%E5%9B%A0%E5%AD%90%E5%9B%BE%E5%B1%95%E5%BC%80%E4%B8%BA%E6%A0%91%E7%8A%B6%E5%9B%BE.png)
+
+![因子图展开为树状图](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075344_%E5%9B%A0%E5%AD%90%E5%9B%BE%E5%B1%95%E5%BC%80%E4%B8%BA%E6%A0%91%E7%8A%B6%E5%9B%BE.png)  
+
 
 如上图所示，我们首先考虑将一个功能节点 $a$ 拿走，剩下的网络构成 $\text{old}$ 网络，然后再将 $a$ 加回去，作为 $\text{new}$ 网络。新旧网络的自由能差值即这个功能节点的自由能。新网络的哈密顿量可以写为
 $$
@@ -238,9 +244,10 @@ $$
 **空腔磁化强度**   在空腔方法中，首先定义cavity magnetization $m_{i\to a}$，即变量节点 $i$ 和功能节点$a$之间的连接不存在时，节点 $i$ 的磁化强度
 $$
 m_{i\to a}=\frac{\sum_{\sigma}\sigma_i\exp{-\beta H_{i\to a}(\boldsymbol{\sigma})} }{\sum_{\sigma}\exp{-\beta H_{i\to a}(\boldsymbol{\sigma})} } \label{eq:空腔磁化强度的定义}
-$$
+$$   
 
-![空腔磁化强度示意图](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075351_%E7%A9%BA%E8%85%94%E7%A3%81%E5%8C%96%E5%BC%BA%E5%BA%A6%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
+![空腔磁化强度示意图](https://images.cnblogs.com/cnblogs_com/blogs/779311/galleries/2257667/o_221225075351_%E7%A9%BA%E8%85%94%E7%A3%81%E5%8C%96%E5%BC%BA%E5%BA%A6%E7%A4%BA%E6%84%8F%E5%9B%BE.png)  
+
 
 其中，$H_{i \rightarrow a}$ 是指把节点 $a$ 拿掉后节点 $i$ 的哈密顿量，
 
@@ -303,7 +310,6 @@ $$
 $$
 
 
-
 **共轭空腔磁化强度**  定义空腔磁化强度 $m_{j\to b}$ 的 conjugate cavity magnetization为
 $$
 \hat{m}_{b \rightarrow j} \equiv \tanh \left(\beta J_b\right) \prod_{j \in \partial b \backslash i} m_{j \rightarrow b}
@@ -354,10 +360,11 @@ $$
 \sigma_i=\arg \max _{\sigma_i} P_i\left(\sigma_i\right)
 $$
 
-# 拓展阅读与应用举例
+
+# 拓展阅读与应用举例  
 
 
-## Further reading
+## Further reading  
 
 
 **More details and results:**
@@ -389,35 +396,36 @@ $$
 
 [g] Lucibello, Carlo, et al. "[Deep learning via message passing algorithms based on belief propagation.](https://arxiv.org/abs/2110.14583)" *Machine Learning: Science and Technology* 3.3 (2022): 035005.
 
-## 空腔方法在RNN中的应用
+
+## 空腔方法在RNN中的应用  
 
 （待补充）
 
 
 
-# 作业
+# 作业  
 
-## Assignment 1
+## Assignment 1  
 
-Use cavity method to calculate the free energy and magnetization of the Sherrington-Kirkpatrick (SK) model, and compare the result with numerical enumeration.
-
-
-
-## Assignment 2
-
-a: Write a program to implement the encoding and decoding scheme in Sourlas code system $\left(K \equiv|\partial a|=3, \mathrm{R} \equiv \frac{N}{M}=0.5\right)$. 
-
-b: Then show how the decoding performance changes with the flipping rate $p$ at a special temperature $\beta_p=\frac{1}{2} \ln \frac{1-p}{p}$.
+Use cavity method to calculate the free energy and magnetization of the Sherrington-Kirkpatrick (SK) model, and compare the result with numerical enumeration.  
 
 
 
-# 参考文献
+## Assignment 2  
+
+a: Write a program to implement the encoding and decoding scheme in Sourlas code system $\left(K \equiv|\partial a|=3, \mathrm{R} \equiv \frac{N}{M}=0.5\right)$.   
+
+b: Then show how the decoding performance changes with the flipping rate $p$ at a special temperature $\beta_p=\frac{1}{2} \ln \frac{1-p}{p}$.  
+
+
+
+# 参考文献  
 
 [1] 刘川. 热力学与统计物理[M]. 北京：北京大学出版社，2022：172-173. 
 [2] Shannon,  C. E. [A Mathematical Theory of Communication](https://ieeexplore.ieee.org/document/6773024)[J]. Bell Systems Technical Journal, 1948, 27(4):623-656.
 [3] Sourlas, Nicolas. [Spin-glass models as error-correcting codes](https://www.nature.com/articles/339693a0)[J]. Nature, 1989, 339(6227):693-695.
 
-</div><script type="text/javascript" src="/js/share.js?v=1.0.0" async></script><a class="article-share-link" data-url="http://example.com/2022/12/25/cavity%20method/" data-id="clc39fegb0000yk7o33ghbghr" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aQU7EMAwFUO5/6SKxAkHTb6dFavKyQqXTyevCY8f++IjX8bXOrn9fZ5/6fU9y5eaFgYHxWsYxXON7kv+evYjfTxjjx8/HwMDYgTEOskewpjYR8C72jIGBgXESLu8NsuOXgoGBgZEzeqnkuOocX8HAwMCYT/jyrSeAx2txDAyMFzKqjYH//PvB/gYGBsZLGEdxVYvYpNlZDbJ/PAcDA2NpRu+oq9oq6B3952klBgbG2oz8YGv+QC1pHlSTxR+/GxgYGEsz8pBXPei/a/jsgoeBgbENo1dG9hK+XnO0Wb5iYGAsx5hpPSYJ5b3FMwYGxm6McUC8K+GrFq7l/gYGBsYGjN6RffKc5KguJ13U4hgYGAsxzoJskt5Vw3TyUsb3R4ksBgbGcoxkczNHafOthehQDwMDY2lGL3UrtxhbYToJ9xgYGLsx8jIyD7XV4rZXHmNgYKzNqH5xkj72hjNmWg4YGBj7MPKRi2pxm8OaRTIGBsbSjHzka74xMNP4LIAxMDCWY+SDXEmo7RWxt/U3MDAwtmHMbCUfp6gOVVyEYAwMjKUZvZGI5BXMFMP53soFLQYGxgsZR3FVj8Nyan49KmIxMDAWYuSr2sisBvHeYBkGBsY+jDzI5oE4R843JDAwMPZhzAfBHvW2chcDAwMjHn1Ijt6qZXD0HAwMDIzHhsbydsJFwxUDA2MDRq+InWmCju8sJ5QYGBhLM2ZKxyeGKh4BYGBgvJXxCffQMwhxmTCUAAAAAElFTkSuQmCC">分享</a><div class="tags"></div><div class="post-nav"><a class="pre" href="/2022/12/25/hello-world/">Hello World</a><a class="next" href="/2022/12/25/SMNN/">专栏汇总：神经网络的统计力学</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://example.com"/></form></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img class="nofancybox" src="/img/avatar.png"/></a><p>Li Yuhao</p><a class="info-icon" href="mailto:lyh.sysu@outlook.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/lyhsysu" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SMNN/">SMNN</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/12/25/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/25/cavity%20method/">【SMNN】自旋玻璃与空腔方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/25/SMNN/">专栏汇总：神经网络的统计力学</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">Li Yuhao's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="复制成功！"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/x-mathjax-config">MathJax.Hub.Config({
+</div><script type="text/javascript" src="/js/share.js?v=1.0.0" async></script><a class="article-share-link" data-url="http://example.com/2022/12/25/cavity%20method/" data-id="clc3bjxy200035c7o77g5g06q" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aQU7EMAwFUO5/6SKxAkHTb6dFavKyQqXTyevCY8f++IjX8bXOrn9fZ5/6fU9y5eaFgYHxWsYxXON7kv+evYjfTxjjx8/HwMDYgTEOskewpjYR8C72jIGBgXESLu8NsuOXgoGBgZEzeqnkuOocX8HAwMCYT/jyrSeAx2txDAyMFzKqjYH//PvB/gYGBsZLGEdxVYvYpNlZDbJ/PAcDA2NpRu+oq9oq6B3952klBgbG2oz8YGv+QC1pHlSTxR+/GxgYGEsz8pBXPei/a/jsgoeBgbENo1dG9hK+XnO0Wb5iYGAsx5hpPSYJ5b3FMwYGxm6McUC8K+GrFq7l/gYGBsYGjN6RffKc5KguJ13U4hgYGAsxzoJskt5Vw3TyUsb3R4ksBgbGcoxkczNHafOthehQDwMDY2lGL3UrtxhbYToJ9xgYGLsx8jIyD7XV4rZXHmNgYKzNqH5xkj72hjNmWg4YGBj7MPKRi2pxm8OaRTIGBsbSjHzka74xMNP4LIAxMDCWY+SDXEmo7RWxt/U3MDAwtmHMbCUfp6gOVVyEYAwMjKUZvZGI5BXMFMP53soFLQYGxgsZR3FVj8Nyan49KmIxMDAWYuSr2sisBvHeYBkGBsY+jDzI5oE4R843JDAwMPZhzAfBHvW2chcDAwMjHn1Ijt6qZXD0HAwMDIzHhsbydsJFwxUDA2MDRq+InWmCju8sJ5QYGBhLM2ZKxyeGKh4BYGBgvJXxCffQMwhxmTCUAAAAAElFTkSuQmCC">分享</a><div class="tags"></div><div class="post-nav"><a class="pre" href="/2022/12/25/SMNN/">专栏汇总：神经网络的统计力学</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://example.com"/></form></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img class="nofancybox" src="/img/avatar.png"/></a><p>Li Yuhao</p><a class="info-icon" href="mailto:lyh.sysu@outlook.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/lyhsysu" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SMNN/">SMNN</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/12/25/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/25/SMNN/">专栏汇总：神经网络的统计力学</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/25/cavity%20method/">【SMNN】自旋玻璃与空腔方法</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">Li Yuhao's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="复制成功！"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
   });
 </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
